@@ -44,7 +44,7 @@ router.post("/text", async (req, res) => {
         },
       }
     );
-
+    console.log(response.data)
     res.status(200).json({ text: response.data.choices[0].message.content });
   } catch (error) {
     console.error("error", error.response.data.error);
